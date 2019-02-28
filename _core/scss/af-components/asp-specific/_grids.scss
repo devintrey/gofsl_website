@@ -1,0 +1,18 @@
+﻿/// <reference path="../../core.scss"/>
+
+
+@mixin af-grids {
+    .grids {
+
+        &.small {
+            margin: rem-calc(8px);
+            font-size: rem-calc(12px);
+
+            tbody {
+                th, td {
+                    padding: 4px;
+                }
+            }
+        }
+    }
+}

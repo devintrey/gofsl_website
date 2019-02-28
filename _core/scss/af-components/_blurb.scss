@@ -1,0 +1,54 @@
+﻿/// <reference path="../core.scss"/>
+@mixin af-blurb {
+    .blurb {
+
+        &.border-round {
+            @include border-radius($blurb-border-radius);
+        }
+
+        &.dark {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        &.transparent {
+            background-color: rgba(0,0,0,.4);
+        }
+
+        &.bottom {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 15px;
+        }
+
+        @include z-interactive;
+
+    }
+}
+
+
+@mixin z-interactive {
+
+    &.interactive {
+        padding: 0;
+        height: 100%;
+        margin: 0 rem-calc(8px);
+        text-align: center;
+
+        a {
+            display: block;
+            height: 100%;
+            background-color: $primary-color;
+            color: whatColor(white);
+            padding: rem-calc(20px);
+            border: $secondary-color solid rem-calc(2px);
+            border-radius: rem-calc(10px);
+            @include transition(all .18s);
+
+            &:hover {
+                background-color: $secondary-color;
+                color: whatColor(light-gray);
+            }
+        }
+    }
+}

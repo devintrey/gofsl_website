@@ -1,0 +1,144 @@
+﻿/// <reference path="../../core.scss"/>
+@import "../mixins/helpers";
+
+@mixin af-offcanvas {
+    .off-canvas-content {
+        #toggles a.button {
+            border: none;
+            border-radius: 5px;
+            margin: 5px 5px 0 0;
+            background: $offcanvas-togglebtn-background;
+
+            &:hover {
+                color: $offcanvas-togglebtn-hovercolor;
+                background-color: $offcanvas-togglebtn-hover-background;
+            }
+        }
+    }
+    /*the offcanvas menu*/
+    .off-canvas.position-right {
+        top: 0;
+        padding: 45px 0;
+
+        h1, h2, h3, h4, h5, h6 {
+            padding-left: rem-calc(8);
+            margin: rem-calc(24 0 16);
+        }
+
+        nav {
+            ul {
+                border-top: $offcanvas-link-border-bottom;
+                font-size: rem-calc(16);
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    position: relative;
+                    overflow: hidden;
+
+                    ul.children {
+                        display: none;
+                        background-color: tint(whatColor(dark-gray), 75%);
+                        border-top: 1px solid #a69d97;
+                        margin-left: 0;
+
+                        li {
+                            border-bottom-color: #bab1ac;
+
+                            a {
+                                border-top-color: #edecea;
+                            }
+                        }
+                    }
+
+                    a {
+                        position: relative;
+                        border-top: $offcanvas-link-border-top;
+                        border-bottom-width: 0 !important;
+                        border-left: 3px solid transparent;
+                        color: scale-color($offcanvas-link-color, $lightness: -75%);
+                        width: 100%;
+                        display: block;
+                        padding: 8px;
+
+                        &:hover {
+                            color: $offcanvas-link-color;
+                            background-color: $offcanvas-link-hover-bgcolor;
+                            border-bottom-width: 0 !important;
+                        }
+
+                        &.current:before {
+                            content: "";
+                            position: absolute;
+                            top: -1px;
+                            bottom: 0;
+                            left: -3px;
+                            width: 3px;
+                            background: $offcanvas-link-activecolor;
+                        }
+
+                        &.more {
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            background-color: transparent;
+                            background-image: url('/_core/img/mobile-nav-more.png') !important;
+                            background-repeat: no-repeat !important;
+                            background-position: center center !important;
+                            padding: rem-calc(10 15) !important;
+                            width: rem-calc(39px);
+                            text-indent: -9999px;
+                        }
+                    }
+
+                    &.has-children {
+                        > a:not(.more) {
+                            width: calc(100% - 40px);
+
+                            &:after {
+                                position: absolute;
+                                content: '';
+                                right: -2px;
+                                // background: #bab1ac;
+                                background: #dad8d6;
+                                top: -1px;
+                                bottom: 0;
+                                width: 1px;
+                            }
+                        }
+                    }
+
+                    &.open {
+                        a.more {
+                            background-image: url('/_core/img/mobile-nav-less.png') !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin more-link {
+    li a.more {
+        // border-left: $off-canvas-link-border-bottom;
+        // Height is getting set by jquery
+        // height: 100%;
+        // Positioning
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        @include transition(none);
+
+        &:hover,
+        &:focus {
+            // background-color: tint($off-canvas-bg, 80%);
+        }
+    }
+
+    li.open > a.more {
+        background-image: url('/_core/img/mobile-nav-less.png') !important;
+    }
+}

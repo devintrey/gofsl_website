@@ -1,0 +1,62 @@
+﻿/// <reference path="../../core.scss"/>
+
+@mixin af-dropdown {
+
+    &.dropdown {
+        // Remove fancy hover stuff.
+        /*a:not(.current):after,
+    a:not(.current):hover:after {
+        display: none;
+    }*/
+        // 2nd level navigation
+        ul.submenu {
+            display: none;
+            position: absolute;
+            top: 24px;
+            left: 0;
+            text-transform: none;
+            width: auto;
+            z-index: 1206;
+            min-width: 256px;
+            max-width: 256px;
+            margin: 0;
+            padding: 0;
+
+            .is-stuck & {
+                top: 38px;
+            }
+
+            &:hover {
+                display: block; //opens menu on mouseover
+            }
+
+            li {
+                display: block;
+                border-left: none;
+                border-top: 1px solid whatColor(light-gray);
+                text-align: left;
+                padding: 0;
+
+
+                &:first-child {
+                    border-top: none;
+                }
+
+                a {
+                    display: inline-block;
+                    width: 100%;
+                    padding: rem-calc(4 8);
+                    background-color: $side-nav-bg-color;
+                    color: $side-nav-link-color;
+                    box-shadow: 0 3px 8px rgba(0,0,0,.5);
+
+                    &:hover {
+                        background-color: $side-nav-bg-color-hover;
+                        color: $side-nav-link-color-hover;
+                        @include transition(color .3s, background-color .3s);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,80 @@
+﻿/// <reference path="../core.scss"/>
+
+@mixin af-cards {
+    .cards {
+        position: relative;
+        margin-bottom: 10px;
+
+        &.google {
+            padding: 0;
+            box-shadow: 0 1px 2px #aaa;
+            background: $card-google-background;
+            border-radius: 5px;
+            text-align: left;
+            overflow: hidden;
+
+            h4 {
+                font-size: 1rem;
+                font-weight: 700;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+
+            h5 {
+                font-size: 0.75rem;
+                color: $card-google-h5-color;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+
+            &:after {
+                position: absolute;
+                font-size: .6rem;
+                top: 10px;
+                right: 10px;
+                content: "i";
+                border: thin solid gray;
+                color: gray;
+                width: .9rem;
+                line-height: .9rem;
+                text-align: center;
+                border-radius: 50%;
+                pointer-events: none;
+            }
+        }
+
+        .header {
+            display: block;
+            position: relative;
+            padding: rem-calc(7px);
+            margin-bottom: 10px;
+        }
+
+        .body {
+            position: relative;
+            display: inline-block;
+            position: relative;
+            font-size: $card-google-body-fontsize;
+            padding: 0 15px 15px 15px !important;
+            margin-bottom: 30px;
+            width: 100%;
+
+            p {
+                margin-top: 0;
+                padding-top: 0;
+            }
+        }
+
+        .footer {
+            width: 100%;
+            background: $card-google-footer-background;
+            color: $card-google-footer-fontcolor;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            margin: 0;
+            padding: rem-calc(5px);
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+    }
+}

@@ -1,0 +1,181 @@
+﻿/// <reference path="../core.scss"/>
+
+@mixin af-social {
+
+    #social-grid {
+
+        .grid-sizer, .item {
+            width: 33.33333%;
+
+            @include breakpoint(medium only) {
+                width: 25%;
+            }
+
+            @include breakpoint(large) {
+                width: 20%;
+            }
+        }
+
+        .item {
+
+            @include breakpoint(large) {
+                &:nth-child(8), &:nth-child(9) {
+                    display: none;
+                }
+            }
+
+            &.w2 {
+                width: 66.66666%;
+
+                @include breakpoint(medium only) {
+                    width: 50%;
+                }
+
+                @include breakpoint(large) {
+                    width: 40%;
+                }
+            }
+
+            video {
+                font-size: 0;
+                display: block;
+            }
+
+            &.has-video {
+                a {
+                    &:after, &:before {
+                        @include transition(all 350ms ease-in-out);
+                    }
+
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        width: 75px;
+                        height: 75px;
+                        border-radius: 50%;
+                        border: 3px solid rgba(250,250,250,.9);
+                        top: 50%;
+                        left: 50%;
+                        background: rgba(250,250,250,.7);
+                        margin-top: -36px;
+                        margin-left: -36px
+                    }
+
+                    &:after {
+                        font-family: 'FontAwesome';
+                        speak: none;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-variant: normal;
+                        text-transform: none;
+                        line-height: 1;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        content: "\f01d";
+                        position: absolute;
+                        width: 50px;
+                        height: 50px;
+                        top: 50%;
+                        left: 50%;
+                        margin-top: -25px;
+                        margin-left: -20px;
+                        font-size: 3.125rem;
+                        color: rgba(0,0,0,.5)
+                    }
+
+                    &:hover {
+                        &:after {
+                            color: rgba(0,0,0,.6)
+                        }
+
+                        &:before {
+                            border: 3px solid #fafafa;
+                            background: rgba(250,250,250,.9)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    .social-grid-cta p {
+        color: #DBD9D6;
+        font-size: .875rem;
+        margin: .625rem 1rem .3125rem 0;
+        line-height: 1.15;
+        text-align: center
+    }
+
+    .social-grid-cta [class^=icon-] {
+        font-size: 1.5rem;
+        color: #DBD9D6;
+        margin-top: 2px;
+        display: inline-block;
+        transition: all .27s ease-in-out
+    }
+
+    .social-grid-cta [class^=icon-]:focus, .social-grid-cta [class^=icon-]:hover, .social-grid-links ul.social a {
+        color: #fff
+    }
+
+    .social-grid-cta [class^=icon-]:before {
+        border: 2px solid #DBD9D6;
+        border-radius: 50%;
+        margin-right: .5rem
+    }
+
+    .social-grid-links {
+        text-align: center;
+        margin-top: 32px
+    }
+
+    .social-grid-links [class^=icon-]:before {
+        font-size: 1.5rem
+    }
+
+    .social-grid-links ul.social a:focus:before, .social-grid-links ul.social a:hover:before {
+        color: #4A3C31;
+        background: #EDEDEA;
+        border-color: #EDEDEA
+    }
+
+    @media screen and (min-width:40em) {
+        .social-grid-cta p {
+            float: left;
+            text-align: right
+        }
+
+        .social-grid-cta .break {
+            display: block;
+            clear: left
+        }
+
+        .social-grid-links {
+            text-align: right;
+            margin-top: 13px
+        }
+    }
+
+    .section:not(.dark) .social-grid-cta [class^=icon-], .section:not(.dark) .social-grid-cta p {
+        color: #4A3C31
+    }
+
+    .section:not(.dark) .social-grid-cta [class^=icon-]:before {
+        border: 2px solid #4a3c31
+    }
+
+    .section:not(.dark) .social-grid-cta [class^=icon-]:focus, .section:not(.dark) .social-grid-cta [class^=icon-]:hover, .section:not(.dark) .social-grid-links ul.social a {
+        color: #4a3c31
+    }
+
+    .section:not(.dark) .border ul.social a:before {
+        border: 2px solid #4a3c31;
+        color: #4a3c31
+    }
+
+    .section:not(.dark) .social-grid-links [class^=icon-]:hover:before {
+        background: 0 0
+    }
+}

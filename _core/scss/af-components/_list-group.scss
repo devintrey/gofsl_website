@@ -1,0 +1,206 @@
+﻿/// <reference path="../core.scss"/>
+//THANK YOU BOOTSTRAP
+
+$list-group-color: whatColor(white) !default;
+$list-group-bg: $white !default;
+$list-group-border-color: rgba($black,.125) !default;
+$list-group-border-width: rem-calc(1px) !default;
+$list-group-border-radius: $border-radius !default;
+
+$list-group-item-padding-y: .75rem !default;
+$list-group-item-padding-x: 1.25rem !default;
+
+$list-group-hover-bg: whatColor(light-gray) !default;
+$list-group-active-color: whatColor(orange) !default;
+$list-group-active-bg: whatColor(dark-gray) !default;
+$list-group-active-border-color: $list-group-active-bg !default;
+
+$list-group-disabled-color: whatColor(light-gray) !default;
+$list-group-disabled-bg: $list-group-bg !default;
+
+$list-group-link-color: whatColor(dark-gray) !default;
+$list-group-link-hover-color: $list-group-link-color !default;
+
+$list-group-link-active-color: $list-group-color !default;
+$list-group-link-active-bg: whatColor(light-gray) !default;
+
+$enable-hover-media-query: true;
+
+@mixin hover {
+    // TODO: re-enable along with mq4-hover-shim
+    //  @if $enable-hover-media-query {
+    //    // See Media Queries Level 4: https://drafts.csswg.org/mediaqueries/#hover
+    //    // Currently shimmed by https://github.com/twbs/mq4-hover-shim
+    //    @media (hover: hover) {
+    //      &:hover { @content }
+    //    }
+    //  }
+    //  @else {
+    // scss-lint:disable Indentation
+    &:hover {
+        @content
+    }
+    // scss-lint:enable Indentation
+    //  }
+}
+
+
+@mixin hover-focus {
+    @if $enable-hover-media-query {
+        &:focus {
+            @content
+        }
+
+        @include hover {
+            @content
+        }
+    }
+    @else {
+        &:focus,
+        &:hover {
+            @content
+        }
+    }
+}
+
+@mixin plain-hover-focus {
+    @if $enable-hover-media-query {
+        &,
+        &:focus {
+            @content
+        }
+
+        @include hover {
+            @content
+        }
+    }
+    @else {
+        &,
+        &:focus,
+        &:hover {
+            @content
+        }
+    }
+}
+
+@mixin hover-focus-active {
+    @if $enable-hover-media-query {
+        &:focus,
+        &:active {
+            @content
+        }
+
+        @include hover {
+            @content
+        }
+    }
+    @else {
+        &:focus,
+        &:active,
+        &:hover {
+            @content
+        }
+    }
+}
+
+@mixin bs-list-group {
+    // Base class
+    //
+    // Easily usable on <ul>, <ol>, or <div>.
+    .list-group {
+        display: flex;
+        flex-direction: column;
+        // No need to set list-style: none; since .list-group-item is block level
+        padding-left: 0; // reset padding because ul and ol
+        margin-bottom: 0;
+    }
+    // Interactive list items
+    //
+    // Use anchor or button elements instead of `li`s or `div`s to create interactive
+    // list items. Includes an extra `.active` modifier class for selected items.
+    .list-group-item-action {
+        width: 100%; // For `<button>`s (anchors become 100% by default though)
+        color: $list-group-link-color;
+        text-align: inherit; // For `<button>`s (anchors inherit)
+        // Hover state
+        @include hover-focus {
+            color: $list-group-link-hover-color;
+            text-decoration: none;
+            background-color: $list-group-hover-bg;
+        }
+
+        &:active {
+            color: $list-group-link-active-color;
+            background-color: $list-group-link-active-bg;
+        }
+    }
+    // Individual list items
+    //
+    // Use on `li`s or `div`s within the `.list-group` parent.
+    .list-group-item {
+        position: relative;
+        display: block;
+        padding: $list-group-item-padding-y $list-group-item-padding-x;
+        // Place the border on the list items and negative margin up for better styling
+        margin-bottom: -$list-group-border-width;
+        background-color: $list-group-bg;
+        border: $list-group-border-width solid $list-group-border-color;
+
+        &:first-child {
+            @include border-top-radius($list-group-border-radius);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+            @include border-bottom-radius($list-group-border-radius);
+        }
+
+        @include hover-focus {
+            text-decoration: none;
+        }
+
+        &.disabled,
+        &:disabled {
+            color: $list-group-disabled-color;
+            background-color: $list-group-disabled-bg;
+        }
+        // Include both here for `<a>`s and `<button>`s
+        &.active {
+            z-index: 2; // Place active items above their siblings for proper border styling
+            color: $list-group-active-color;
+            background-color: $list-group-active-bg;
+            border-color: $list-group-active-border-color;
+        }
+    }
+    // Flush list items
+    //
+    // Remove borders and border-radius to keep list group items edge-to-edge. Most
+    // useful within other components (e.g., cards).
+    .list-group-flush {
+        .list-group-item {
+            border-right: 0;
+            border-left: 0;
+            border-radius: 0;
+        }
+
+        &:first-child {
+            .list-group-item:first-child {
+                border-top: 0;
+            }
+        }
+
+        &:last-child {
+            .list-group-item:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+    // Contextual variants
+    //
+    // Add modifier classes to change text and background color on individual items.
+    // Organizationally, this must come after the `:hover` states.
+    /*@include list-group-item-variant(success, $state-success-bg, $state-success-text);
+@include list-group-item-variant(info, $state-info-bg, $state-info-text);
+@include list-group-item-variant(warning, $state-warning-bg, $state-warning-text);
+@include list-group-item-variant(danger, $state-danger-bg, $state-danger-text);*/
+}

@@ -1,0 +1,29 @@
+﻿/// <reference path="../core.scss"/>
+
+@mixin af-profile {
+    .profile {
+
+        &.photo {
+
+            @include breakpoint(small only) {
+                text-align: center;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+
+                @include breakpoint(small only) {
+                    display: inline-block !important;
+                    width: auto;
+                    max-height: 300px;
+                    padding-bottom: 12px;
+                }
+            }
+        }
+
+        &.quote {
+            padding: 0 55px;
+        }
+    }
+}

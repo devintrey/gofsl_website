@@ -1,0 +1,151 @@
+﻿/// <reference path="../../core.scss"/>
+
+$side-nav-padding: rem-calc(8 16) !default;
+
+// We use these to control list styles.
+$side-nav-list-type: none !default;
+$side-nav-list-position: inside !default;
+$side-nav-list-margin: rem-calc(0 0 0 0) !default;
+
+$side-nav-bg-color: tint(whatColor(dark-gray), 90%) !default;
+$side-nav-bg-color-hover: tint(whatColor(dark-gray), 60%) !default;
+
+// We use these to control link styles.
+$side-nav-link-color: whatColor(dark-gray) !default;
+$side-nav-link-color-active: scale-color($side-nav-link-color, $lightness: -70%) !default;
+$side-nav-link-color-hover: whatColor(white) !default;
+
+$side-nav-font-size: rem-calc(16) !default;
+$side-nav-font-weight: normal !default;
+$side-nav-font-weight-active: $side-nav-font-weight !default;
+$side-nav-font-family: $body-font-family !default;
+$side-nav-active-font-family: $side-nav-font-family !default;
+
+$side-nav-divider-size: 1px !default;
+$side-nav-divider-style: solid !default;
+$side-nav-divider-color: #fff !default;
+
+@mixin af-leftnav {
+
+    @include breakpoint(large) {
+
+        .section-nav {
+            @include grid-column(3);
+            padding-top: rem-calc(30px);
+            padding-right: 0 !important;
+
+            nav {
+                > ul {
+                    border-left: 1px solid #fff;
+                    border-right: none;
+                }
+
+                ul {
+                    font-size: $side-nav-font-size;
+                    margin: $side-nav-list-margin;
+                    list-style-type: $side-nav-list-type;
+
+                    li {
+
+                        a {
+                            background-color: $side-nav-bg-color;
+                            position: relative;
+                            display: block;
+                            color: $side-nav-link-color;
+                            border-bottom: $side-nav-divider-size $side-nav-divider-style $side-nav-divider-color;
+                            padding: $side-nav-padding;
+
+                            &:hover {
+                                background-color: $side-nav-bg-color-hover;
+                                color: $side-nav-link-color-hover;
+                                @include transition(all .3s);
+                            }
+
+                            &.current {
+
+                                &:before {
+                                    content: "";
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    width: 3px;
+                                    background: whatColor(orange);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+
+
+            a:hover {
+            }
+
+            a .current li > ul {
+                display: none;
+            }
+            // 2nd level
+            li.current-trail ul {
+                display: block;
+                // background-color: #dcd8d6;
+                // background-color: #DBD8D6;
+                background-color: tint(whatColor(dark-gray), 80%);
+
+                a {
+                    padding-left: rem-calc(28);
+                }
+            }
+            // 3rd level
+            li.current-trail li.current-trail ul {
+                display: block;
+                // background-color: #cfc8c4;
+                // background-color: #D2CECB;
+                background-color: tint(whatColor(dark-gray), 75%);
+                // background-color: $iu-mahogany-30;
+                a {
+                    padding-left: rem-calc(40);
+                }
+            }
+            // 4th level
+            li.current-trail li.current-trail li.current-trail ul {
+                display: block;
+                // background-color: #cfc8c4;
+                // background-color: #C9C4C1;
+                background-color: tint(whatColor(dark-gray), 70%);
+                // background-color: $iu-mahogany-40;
+                a {
+                    padding-left: rem-calc(52);
+                }
+            }
+            // 5th level
+            li.current-trail li.current-trail li.current-trail li.current-trail ul {
+                display: block;
+                // background-color: #cfc8c4;
+                // background-color: #C0BBB7;
+                background-color: tint(whatColor(dark-gray), 65%);
+                // background-color: $iu-mahogany-50;
+                a {
+                    padding-left: rem-calc(64);
+                }
+            }
+            // 6th level
+            li.current-trail li.current-trail li.current-trail li.current-trail li.current-trail ul {
+                display: block;
+                // background-color: #cfc8c4;
+                // background-color: #B7B1AC;
+                background-color: tint(whatColor(dark-gray), 60%);
+                // background-color: $iu-mahogany-60;
+                a {
+                    padding-left: rem-calc(76);
+                }
+            }
+            // li.has-children > ul > li:last-child a {
+            // 	border-bottom: $side-nav-divider-size $side-nav-divider-style $side-nav-divider-color;
+            // }
+        }
+    }
+}

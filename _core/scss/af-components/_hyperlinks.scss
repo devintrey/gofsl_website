@@ -1,0 +1,70 @@
+﻿/// <reference path="../core.scss"/>
+@import "mixins/helpers";
+
+@mixin af-hyperlinks {
+
+    section {
+        a:not(.button):not(.no-background):not(.disable-default) {
+            background: $anchor-font-background;
+            @include transition(all .18s);
+
+            section .std & {
+                color: $anchor-fontcolor;
+            }
+
+            &:hover {
+                background-color: tint(whatColor(dark-gray), 70%);
+            }
+        }
+    }
+
+    a[href$=".doc"],
+    a[href$=".docx"],
+    a[href$=".xlsx"],
+    a[href$=".ppt"],
+    a[href$=".pdf"] {
+        &:before {
+            display: none;
+        }
+    }
+
+    a[href$=".doc"]:after,
+    a[href$=".docx"]:after,
+    a[href$=".xlsx"]:after,
+    a[href$=".ppt"]:after,
+    a[href$=".pdf"]:after {
+        font-family: 'FontAwesome';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        /* Better Font Rendering =========== */
+        -webkit-font-smoothing: antialiased;
+        font-size: 1rem;
+        margin-left: 4px;
+    }
+    // PDF
+    // .icon-pdf:before
+    a[href$=".pdf"]:after {
+        content: "\f1c1";
+    }
+    // .icon-word:before
+    a[href$=".doc"]:after,
+    a[href$=".docx"]:after {
+        content: "\f1c2";
+    }
+    // .icon-excel:before,
+    a[href$=".xlsx"]:after {
+        content: "\f1c3";
+    }
+    // .icon-powerpoint:before
+    a[href$=".ppt"]:after {
+        content: "\f1c4";
+    }
+    // Generic document
+    // .icon-document:before {
+    // 	content: "\f1c5";
+    // }
+}

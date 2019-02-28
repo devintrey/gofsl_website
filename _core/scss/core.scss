@@ -1,0 +1,83 @@
+﻿/**
+ * Core by Fraze
+ * Version 1.0.3
+ * afraze at gmail d0t com
+ * Licensed under MIT Open Source
+ */
+
+//EXTERNAL IMPORTS (if any)
+//IMPORT FONTS IN YOUR LOCAL SASS SITE FILE BEFORE IMPORTING CORE
+//@import url('https://fonts.googleapis.com/css?family=Nunito:400,700,800,900');
+
+//HELPERS
+@import "foundation/util/util";
+@import "af-components/mixins/helpers";
+
+//MY GLOBAL & COLORS
+@import "af-components/colors";
+@import "af-global";
+
+//VENDOR STUFF
+@import "foundation/foundation.scss";
+@import "/_core/scss/animate/animate.css";
+@import "/_core/scss/font-awesome/font-awesome.css";
+@import "slick/slick.scss";
+@import "af-components/list-group";
+
+//NAVIGATION
+@import "af-components/header";
+@import "af-components/navs/offcanvas";
+@import "af-components/navs/top";
+@import "af-components/navs/crumbs";
+@import "af-components/navs/leftnav";
+@import "af-components/navs/dropdown";
+
+//MY SCHTUFF
+@import "af-components/sections";
+@import "af-components/borders";
+@import "af-components/hero";
+@import "af-components/cards";
+@import "af-components/common";
+@import "af-components/hyperlinks";
+@import "af-components/profile";
+@import "af-components/stats";
+@import "af-components/blurb";
+@import "af-components/forms";
+@import "af-components/social";
+
+@import "af-components/asp-specific/grids";
+
+//MY INCLUDES
+@mixin af-everything {
+
+    @include af-header;
+    //VENDORS
+    @include slick;
+    @include slick-theme;
+    //NAVS
+    @include af-offcanvas;
+    @include af-topnav;
+    @include af-crumbs;
+    @include af-dropdown;
+    @include af-leftnav;
+    //COMMON
+    @include af-sections;
+    @include af-colors;
+    @include af-hero;
+    @include af-borders;
+    @include af-cards;
+    @include af-common;
+    @include af-hyperlinks;
+    @include af-profile;
+    @include af-stats;
+    @include af-blurb;
+    @include af-forms;
+    @include af-social;
+
+    @include af-grids;
+    @include bs-list-group;
+}
+
+//WRITE IT ALL OUT (TO USE IT ALL, PUT IN YOUR LOCAL SITE SASS FILE)
+//@include foundation-everything;  //FOUNDATION
+//@include af-everything; //CORE

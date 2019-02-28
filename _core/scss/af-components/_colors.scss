@@ -1,0 +1,32 @@
+﻿/// <reference path="../core.scss"/>
+
+
+@mixin af-colors {
+
+    //custom colors
+    @each $color, $value in $color-map {
+        .bg-#{$color} {
+            background: $value !important;
+        }
+
+        .color-#{$color} {
+            color: $value !important;
+        }
+    }
+
+    //foundation colors
+    @each $def, $value in $foundation-palette {
+        .bg-#{$def} {
+            background: $value !important;
+        }
+
+        .color-#{$def} {
+            color: $value !important;
+        }
+    }
+}
+
+///EASY MAPPING OF COLORS FROM COLOR-MAP
+@function whatColor($input) {
+    @return map-get($color-map, $input);
+}

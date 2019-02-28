@@ -1,0 +1,62 @@
+﻿/// <reference path="../../core.scss"/>
+
+// We use these to set various text styles for breadcrumbs.
+$crumb-font-size: rem-calc(12) !default;
+$crumb-font-color: whatColor(orange) !default;
+$crumb-font-color-current: #333 !default;
+$crumb-font-color-unavailable: #999 !default;
+$crumb-font-transform: uppercase !default;
+$crumb-link-decor: underline !default;
+
+// We use these to control the slash between breadcrumbs
+$crumb-slash-color: #aaa !default;
+$crumb-slash: ":" !default;
+
+@mixin af-crumbs {
+
+    .breadcrumbs {
+        position: relative;
+        margin-bottom: 0 !important;
+        padding: 0;
+
+
+
+        ul {
+            @extend %reset-list;
+            height: rem-calc(16);
+            line-height: 1.2;
+            @include clearfix;
+
+            li {
+                display: block;
+                float: left;
+                font-size: $crumb-font-size;
+                padding: 0;
+                margin: 0;
+
+                &:not(:first-child):before {
+                    content: "#{$crumb-slash}";
+                    color: $crumb-slash-color;
+                    margin: 0 3px;
+                }
+
+                &:after {
+                    display: none !important; //Foundation tries to add stuff after, this disables
+                }
+
+                &.unavailable {
+                    color: $crumb-font-color-unavailable;
+                }
+
+                &.current {
+                    color: $crumb-font-color-current;
+                    //@include element-invisible;
+                }
+
+                a {
+                    color: $crumb-font-color;
+                }
+            }
+        }
+    }
+}

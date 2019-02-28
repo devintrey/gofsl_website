@@ -1,0 +1,244 @@
+﻿/// <reference path="../../core.scss"/>
+@import "../mixins/helpers";
+
+@mixin sticky-visible-toggles {
+    .show-on-sticky {
+        display: none !important;
+
+        .is-stuck & {
+            display: inline-block !important;
+        }
+    }
+
+    .hide-on-sticky {
+        .is-stuck & {
+            display: none !important;
+        }
+    }
+}
+
+@mixin af-isstuck {
+    .is-stuck {
+        height: $sticky-menu-height !important;
+        width: 100% !important;
+        max-width: 2600px !important;
+        left: 0;
+        padding: 0;
+        background: $sticky-menu-background;
+        z-index: 999;
+        border-bottom: none;
+
+        img {
+            max-height: rem-calc($sticky-menu-height - 30px) !important;
+        }
+
+        &:after {
+            content: "";
+            bottom: -3px;
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: rgba($sticky-menu-bottomborder-base, .3);
+        }
+
+        .row {
+            height: $sticky-menu-height !important;
+
+            .columns {
+                height: $sticky-menu-height !important;
+                padding: 0;
+
+                #nav-main-sticky-wrapper {
+                    height: $sticky-menu-height !important;
+
+                    nav {
+                        height: $sticky-menu-height !important;
+                    }
+                }
+
+                > ul {
+                    height: 100% !important;
+                    padding: 0;
+                    margin: 0;
+
+                    > li {
+                        height: 100% !important;
+                    }
+                }
+            }
+
+            .logo-container {
+                padding: 5px;
+            }
+
+            @include breakpoint(large) {
+                .logo-container {
+                    display: none;
+                }
+
+                .nav-container {
+                    @include grid-column-size(12);
+                    @include flex-grid-column(12);
+                }
+            }
+        }
+    }
+}
+
+@mixin af-topnav {
+
+    @include sticky-visible-toggles;
+    @include af-isstuck;
+
+    nav.main {
+        padding: 0;
+
+        > ul {
+            list-style: none;
+            text-transform: uppercase;
+            font-size: $mainnav-font-size;
+            white-space: nowrap; //prevents wrapping to next line despite width of container
+            > li {
+                display: inline-block;
+                text-align: center;
+                padding: 0;
+                position: relative;
+
+                &:hover {
+                    ul {
+                        display: block; //displays submenu on mouseover
+                    }
+                }
+
+                > a {
+                    color: $mainnav-link-color;
+                    display: inline-block;
+                    position: relative;
+                    font-weight: bold;
+                    padding: 0 10px;
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        margin: auto;
+                        height: 3px;
+                        width: 0px;
+                        background-color: transparent;
+                        transition: width .5s ease, background-color .5s ease;
+                        //@include transition(width .15s ease, background-color .15s ease);
+                    }
+                    // Special effect to slide border from in to out
+                    // Comes from: http://bradsknutson.com/blog/css-sliding-underline/
+                    &:hover:after {
+                        width: 100%;
+                        background: $mainnav-link-hover-underline;
+                    }
+
+                    &.current {
+                        &:after {
+                            width: 100%;
+                            background: $mainnav-link-active-hover-underline;
+                        }
+                    }
+                }
+
+                @include breakpoint(large up) {
+                    .is-stuck & {
+                        position: relative;
+                        border: none;
+                        height: 100%;
+                        white-space: nowrap;
+                        padding: 0;
+                        border-left: $sticky-item-borderleft;
+
+                        > a {
+                            overflow: hidden;
+                            vertical-align: bottom;
+                            padding: $sticky-link-padding;
+                            position: relative;
+                            font-size: $sticky-menu-font-size;
+                            color: $sticky-menu-link-color;
+
+                            &:after {
+                                content: '';
+                                display: block;
+                                margin: auto;
+                                height: 3px;
+                                width: 0px;
+                                background-color: transparent;
+                                transition: width .5s ease, background-color .5s ease;
+                                //@include transition(width .15s ease, background-color .15s ease);
+                            }
+                            // Special effect to slide border from in to out
+                            // Comes from: http://bradsknutson.com/blog/css-sliding-underline/
+                            &:hover:after {
+                                width: 100%;
+                                background: $sticky-link-hover-underline;
+                            }
+
+                            &.current {
+                                &:after {
+                                    width: 100%;
+                                    background: $sticky-link-active-hover-underline;
+                                }
+                            }
+                        }
+
+                        &.first {
+                            border-left: none !important;
+                            @include transform( translateX(0) );
+                            @include animation( homeslidein 400ms ease);
+                            margin-top: -3px; //accomidate for no underline hover
+                            a:after {
+                                display: none;
+                            }
+                        }
+
+                        &.search {
+                            margin-top: -3px; //accomidate for no underline hover
+                            a {
+                                @include transform( translateX(0) );
+                                @include animation( searchslidein 400ms ease);
+
+                                &:after {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include keyframes( searchslidein ) {
+        0% {
+            @include transform( translateX(50px) );
+        }
+
+        20% {
+            @include transform( translateX(50px) );
+        }
+
+        100% {
+            @include transform( translateX(0) );
+        }
+    }
+
+    @include keyframes( homeslidein ) {
+        0% {
+
+            @include transform( translateX(-50px) );
+        }
+
+        20% {
+
+            @include transform( translateX(-50px) );
+        }
+
+        100% {
+
+            @include transform( translateX(0) );
+        }
+    }
+}

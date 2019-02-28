@@ -1,0 +1,171 @@
+﻿/// <reference path="core.scss"/>
+@import "foundation/util/util";
+
+//  Core for Sites Settings
+//  -----------------------------
+//
+//  Table of Contents:
+//
+//   1. Colors
+//   2. Global
+//   3. Headers and Navigations
+//   4. Foundation Overrides
+//   5. Hero
+//   6. Borders
+//   7. Cards
+//   8. Hyperlinks
+//   9. Stats
+//  10. Blurbs
+//  11. Tier 2
+
+/*#region COLORS */
+// 1. Colors
+// --------------
+// Colors are stored in a SASS Map ($color-map)
+// function: whatColor($value) is used to quick-call colors
+//         i.e.  .my-class { color: whatColor(dark-gray); }
+// classes are auto-generated, with color-*,bg-*
+/// @type Map
+$color-map: ( white: #ffffff, dark-gray: #404040, light-gray: #C9C5C1, orange: #DB3A0B, light-orange: #F25A00, blue: #033A57, black: #000000, green: #26AD65 );
+/*#endregion*/
+
+/*#region GLOBALS */
+// 2. Globals
+// --------------
+$af-shade-background-images: true;
+$af-section-padding-top: rem-calc(30);
+$af-section-padding-left: 0;
+$af-section-padding-bottom: rem-calc(30);
+$af-section-padding-right: 0;
+$af-section-hasbottomborder: true;
+$af-section-bottomborder: 2px solid whatColor(light-gray);
+/*#endregion*/
+
+/*#region HEADERS AND NAVIGATION */
+// 3. Headers and Navigations
+// --------------
+$header-height: 67px !default;
+$header-padding-top: 7px;
+$header-padding-left: 7px;
+$header-padding-bottom: 7px;
+$header-padding-right: 7px;
+
+$sticky-menu-height: 55px !default;
+$sticky-menu-background: whatColor(light-gray);
+$sticky-menu-bottomborder-base: whatColor(dark-gray);
+$sticky-menu-font-size: 0.9rem;
+$sticky-menu-link-color: whatColor(dark-gray);
+$sticky-item-borderleft: 1px solid whatColor(dark-gray);
+$sticky-link-padding: 15px 20px;
+$sticky-link-hover-underline: tint(whatColor(orange), 30);
+$sticky-link-active-hover-underline: tint(whatColor(light-gray), 30);
+
+$mainnav-font-size: 1rem;
+$mainnav-link-color: whatColor(white);
+$mainnav-link-hover-underline: tint(whatColor(light-gray), 30);
+$mainnav-link-active-hover-underline: tint(whatColor(light-orange), 30);
+
+$offcanvas-togglebtn-background: whatColor(dark-gray);
+$offcanvas-togglebtn-hovercolor: whatColor(dark-gray);
+$offcanvas-togglebtn-hover-background: whatColor(light-gray);
+
+$offcanvas-link-padding: rem-calc(10, 15) !default;
+$offcanvas-link-color: whatColor(dark-gray) !default;
+$offcanvas-link-activecolor: whatColor(orange);
+$offcanvas-link-hover-bgcolor: whatColor(light-gray);
+$offcanvas-link-border-bottom-color: whatColor(light-gray) !default;
+$offcanvas-link-border-bottom: 1px solid $offcanvas-link-border-bottom-color !default;
+$offcanvas-link-border-top-color: whatColor(white) !default;
+$offcanvas-link-border-top: 1px solid $offcanvas-link-border-top-color !default;
+/*#endregion*/
+
+/*#region FOUNDATION OVERRIDES */
+// 4. Foundation Overrides
+// --------------
+$body-font-family: 'Work Sans', sans-serif !default;
+$body-background: whatColor(white);
+
+/// Colors used for buttons, callouts, links, etc. There must always be a color called `primary`.
+/// @type Map
+$foundation-palette: ( primary: whatColor(orange), secondary: whatColor(dark-gray), success: #3adb76, warning: #ffae00, alert: #cc4b37, ) !default;
+/*#endregion*/
+
+/*#region HERO */
+// 5. Hero
+// --------------
+$hero-xl-height: 500px;
+$hero-lg-height: 500px;
+$hero-md-height: 400px;
+$hero-sm-height: 325px;
+
+$hero-tier2-height: 450px;
+
+$hero-shade-media: true; //transparent background overlay to assist with contrast
+$hero-shade-color: rgba(0, 0, 0, 0.1);
+
+$hero-blurb1-bgcolor: whatColor(white);
+$hero-blurb1-fontcolor: whatColor(dark-gray);
+$hero-blurb1-fontsize: 1.125rem;
+
+$hero-slogan-fontcolor: whatColor(white);
+$hero-slogan-font-size: 3rem;
+$hero-slogan-lg-font-size: 4.5rem;
+$hero-slogan-font-weight: 800;
+
+$hero-formbubble-background: rgba(0, 0, 0, 0.5);
+$hero-formbubble-h3-color: whatColor(orange);
+$hero-formbubble-label-color: whatColor(white);
+/*#endregion*/
+
+/*#region BORDERS */
+// 6. Borders
+// --------------
+$enable-rounded: true !default;
+$border-radius: .25rem !default;
+$border-radius-lg: .3rem !default;
+$border-radius-sm: .2rem !default;
+/*#endregion*/
+
+/*#region CARDS */
+// 7. Cards
+// --------------
+$card-google-background: whatColor(light-gray);
+$card-google-h5-color: whatColor(light-orange);
+$card-google-body-fontsize: 0.9rem;
+$card-google-footer-background: whatColor(dark-gray);
+$card-google-footer-fontcolor: whatColor(white);
+/*#endregion*/
+
+/*#region HYPERLINKS */
+// 8. Hyperlinks
+// --------------
+$anchor-font-background: scale-color(whatColor(light-gray), $lightness: 80%) !default;
+$anchor-fontcolor: whatColor(orange);
+$anchor-hovercolor: whatColor(light-orange);
+/*#endregion*/
+
+/*#region STATS */
+// 9. Stats
+// --------------
+// NOTE: Color of stat background is handled by _core/img/notch.svg (fill attrib)
+$stats-panel-padding: rem-calc(20) !default;
+$stats-info-fontcolor: whatColor(light-gray);
+$stats-paragraph-fontsize: rem-calc(16) !default;
+$stats-stat-fontsize: rem-calc(48) !default;
+$stats-anchor-color: whatColor(orange);
+/*#endregion*/
+
+/*#region BLURBS */
+// 10. Blurbs
+// --------------
+$blurb-border-radius: rem-calc(5);
+/*#endregion*/
+
+/*#region TIER 2 */
+
+// 11. Tier 2
+// --------------
+$tier2-negative-topmargin: rem-calc(70px);
+$tier2-content-padding: rem-calc(30px);
+
+/*#endregion*/

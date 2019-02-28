@@ -1,0 +1,251 @@
+﻿/// <reference path="../core.scss"/>
+
+@import "mixins/helpers";
+
+$hero-xl-minheight: $hero-xl-height;
+$hero-lg-minheight: $hero-lg-height;
+$hero-md-minheight: $hero-md-height;
+$hero-sm-minheight: $hero-sm-height;
+
+$hero-xl-maxheight: $hero-xl-height;
+$hero-lg-maxheight: $hero-lg-height;
+$hero-md-maxheight: $hero-md-height;
+$hero-sm-maxheight: $hero-sm-height;
+
+
+@mixin hero-components() {
+    .blurb1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $hero-blurb1-bgcolor;
+        color: $hero-blurb1-fontcolor;
+        font-size: $hero-blurb1-fontsize;
+        z-index: 9;
+        padding: 10px 15px;
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+
+    .slogan {
+        height: 100%;
+        width: 100%;
+        display: table;
+        position: relative;
+
+        h1 {
+            color: $hero-slogan-fontcolor;
+            display: table-cell;
+            vertical-align: middle;
+            text-shadow: 2px 2px 8px #333;
+            font-weight: $hero-slogan-font-weight;
+            font-size: $hero-slogan-font-size;
+            text-transform: uppercase;
+
+            @include breakpoint(large) {
+                font-size: $hero-slogan-lg-font-size;
+            }
+        }
+
+        .tagline {
+            display: table-row;
+
+            h2 {
+                display: inline-block;
+                font-size: 1.5rem;
+                font-weight: 700;
+                padding: rem-calc(7px) rem-calc(12px);
+
+                @include breakpoint(small only) {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    .form-container {
+        padding: 0;
+
+        @include breakpoint(small only) {
+            padding: 0 20px;
+        }
+
+        .form-bubble {
+            background: $hero-formbubble-background;
+            border-radius: 25px;
+            padding: 15px;
+            margin-bottom: 15px;
+
+            h3 {
+                color: $hero-formbubble-h3-color;
+                font-weight: 700;
+            }
+
+            label {
+                color: $hero-formbubble-label-color;
+            }
+
+            input:not(.button), select {
+                font-size: 0.75rem;
+                height: 1.85rem;
+            }
+
+            select {
+                padding: 0 !important; //won't show otherwise.  oddly
+                background-image: none !important; //webkit already has downward caret
+            }
+        }
+    }
+
+    @if($hero-shade-media) {
+        .filter {
+            position: absolute;
+            background: $hero-shade-color;
+            width: 100%;
+            @include overlay(0,0,0,0,100);
+            z-index: 1;
+        }
+
+        .break-filter {
+            z-index: 2;
+        }
+    }
+}
+
+@mixin hero-heights() {
+    height: $hero-sm-minheight;
+    max-height: $hero-sm-maxheight;
+
+    @include breakpoint(medium only) {
+        height: $hero-md-minheight;
+        max-height: $hero-md-maxheight;
+    }
+
+    @include breakpoint(large only) {
+        height: $hero-lg-minheight;
+        max-height: $hero-lg-maxheight;
+    }
+
+    @include breakpoint(xlarge) {
+        height: $hero-xl-minheight;
+        max-height: $hero-xl-maxheight;
+    }
+}
+
+@mixin af-hero {
+
+    .slick-slider .slick-track, .slick-slider .slick-list {
+        height: 100% !important;
+    }
+
+    .hero {
+        position: relative;
+        @include hero-heights;
+        @include hero-components();
+
+        .row {
+            position: relative;
+            z-index: 101;
+        }
+
+        &.image {
+            position: relative;
+            @include hero-heights;
+
+            .bg-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                /*max-height: $hero-maxheight;*/
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &.video {
+            border-right: none;
+            border-left: none;
+            position: relative;
+
+            .video-container {
+                position: relative;
+                bottom: 0%;
+                left: 0%;
+                height: 100%;
+                overflow: hidden;
+                background: #000;
+
+                > .row {
+                    width: 100%;
+                    z-index: 101;
+                    position: absolute;
+                    color: whatColor(white);
+                    top: 5%;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                }
+
+                video {
+                    position: absolute;
+                    z-index: 0;
+                    bottom: 0;
+                    -o-object-fit: cover !important;
+                    object-fit: cover !important;
+
+                    &.fillWidth {
+                        width: 100% !important;
+                    }
+
+                    source {
+                        width: 100% !important;
+                    }
+                }
+
+                .poster {
+                    img {
+                        width: 100%;
+                        bottom: 0;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+
+        &.tier2 {
+
+            @include breakpoint(large) {
+                height: $hero-tier2-height !important;
+                max-height: $hero-tier2-height !important;
+            }
+        }
+
+        .slick {
+            position: relative;
+            @include hero-heights;
+
+            .slick-prev, .slick-next {
+                z-index: 1200;
+            }
+
+            .slick-prev {
+                left: 10px;
+            }
+
+            .slick-next {
+                right: 10px;
+            }
+
+            .my-slide {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+            }
+        }
+    }
+}

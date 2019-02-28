@@ -1,0 +1,157 @@
+﻿/// <reference path="../core.scss"/>
+
+//DISABLE HELPERS
+@mixin z-nos {
+    .no-padding {
+        padding: 0 !important;
+    }
+
+    .no-borders {
+        border: none !important;
+    }
+
+    .no-filter {
+        &:after {
+            display: none !important;
+        }
+    }
+
+    .no-shadow {
+        text-shadow: none !important;
+    }
+
+    .no-section-nav {
+        @include grid-column($columns: 12);
+    }
+}
+
+//CENTERING HELPERS
+@mixin z-centers {
+    
+    //vertical align text within container
+    .vCenter-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+
+        .vCenter-contents {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    //center block
+    .center-block {
+        position: relative;
+        width: 100%;
+
+        > div {
+            display: table;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+@mixin af-common {
+
+    @include z-nos;
+    @include z-centers;
+
+    //FOUNDATION TIP REMOVE TIP CURSOR
+    .tip-is-popup {
+        cursor: pointer !important;
+        @extend .no-borders;
+    }
+    //VERTICAL TEXT
+    .text-vertical {
+        -ms-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        -webkit-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    }
+    
+    //opacity stuff
+    .opacity-full {
+        opacity: 1.0 !important;
+    }
+
+    @for $i from 1 through 99 {
+        $val: $i / 100;
+
+        .opacity-#{$i} {
+            @include opacity($val);
+        }
+    }
+    //vertical padding helper
+    @for $i from 1 through 100 {
+        .vertical-padding-#{$i} {
+            padding-top: #{$i}px;
+            padding-bottom: #{$i}px;
+        }
+
+        .horizontal-padding-#{$i} {
+            padding-left: #{$i}px;
+            padding-right: #{$i}px;
+        }
+    }
+
+
+    .visually-hidden {
+        @extend %visually-hidden;
+    }
+
+    .img-responsive {
+        max-width: 100%;
+        height: auto;
+        /*display: block;*/
+    }
+
+
+    .img-fill-height {
+        height: 100%;
+        width: auto;
+    }
+
+
+
+
+    .font-9 {
+        font-size: 0.9rem !important;
+    }
+
+    .font-1rem {
+        font-size: 1rem !important;
+    }
+
+    .font-1125rem {
+        font-size: 1.125rem !important;
+    }
+
+    .font-125rem {
+        font-size: 1.25rem !important;
+    }
+
+    
+
+
+    .center-in-small {
+        @include breakpoint(small only) {
+            text-align: center;
+
+            ul {
+                display: inline-block;
+                text-align: left;
+            }
+        }
+    }
+}

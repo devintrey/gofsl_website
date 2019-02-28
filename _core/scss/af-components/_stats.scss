@@ -1,0 +1,83 @@
+﻿/// <reference path="../core.scss"/>
+
+@mixin af-stats {
+    .stat-row {
+        padding-bottom: 30px;
+    }
+
+    .stat {
+        color: whatColor(white);
+        text-align: center;
+        padding: $stats-panel-padding;
+        overflow: hidden;
+        position: relative;
+        height: 100%;
+
+        @include breakpoint(medium down) {
+            margin-bottom: 10px;
+        }
+
+        & > :first-child {
+            margin-top: 0;
+        }
+
+        & > :last-child {
+            margin-bottom: 0;
+        }
+
+        p,
+        .stat--info {
+            //@extend %bs-bold;
+            color: $stats-info-fontcolor;
+            font-size: $stats-paragraph-fontsize;
+            text-transform: uppercase;
+            position: relative;
+            font-weight: 700;
+        }
+
+        p.number,
+        .stat--number {
+            // @extend %bsc-regular;
+            font-size: $stats-stat-fontsize;
+            font-weight: bold;
+            color: whatColor(white);
+            margin-bottom: 0;
+        }
+
+        .stat--text {
+            display: block;
+        }
+
+        a {
+            color: $stats-anchor-color;
+        }
+
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: auto;
+            left: auto;
+            // Shift this notch
+            bottom: -10px;
+            right: -10px;
+            // z-index: -1;
+            background: url("/_core/img/notch.svg") right bottom no-repeat;
+            width: 1000px;
+            height: 1000px;
+        }
+
+        a.button {
+            background: transparent;
+            border-color: whatColor(orange);
+            color: whatColor(orange);
+            width: auto;
+        }
+
+        a.button:hover,
+        a.button:focus {
+            background: whatColor(oranage);
+            color: #fff;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+﻿/// <reference path="../core.scss"/>
+@mixin af-header {
+    header {
+        height: $header-height !important;
+        padding: $header-padding-top $header-padding-right $header-padding-bottom $header-padding-left;
+        width: 100% !important;
+        max-width: 2600px !important;
+        z-index: 999;
+
+        .sticky-container {
+            width: 100% !important;
+            max-width: 2600px !important;
+            height: $header-height !important;
+        }
+
+        > .row {
+
+            .columns {
+                padding: 0;
+            }
+        }
+
+
+        .logo {
+            img {
+                padding: 5px 0;
+
+                @include breakpoint(large) {
+                    max-height: 50px;
+                }
+            }
+        }
+
+        img {
+            max-height: $header-height - ($header-padding-top + $header-padding-bottom);
+        }
+    }
+}

@@ -1,0 +1,74 @@
+﻿/// <reference path="../core.scss"/>
+
+$af-section-padding: $af-section-padding-top $af-section-padding-left $af-section-padding-bottom $af-section-padding-right;
+
+@mixin af-sections {
+    section {
+
+        &.std {
+            position: relative;
+            padding: $af-section-padding;
+
+            @if($af-section-hasbottomborder) {
+                border-bottom: $af-section-bottomborder;
+            }
+        }
+
+        &.tier2 {
+
+            .content {
+                z-index: 2;
+                position: relative;
+                padding: $tier2-content-padding !important;
+                @include grid-column($columns: 12);
+
+                @include breakpoint(large) {
+                    margin-top: rem-calc((-$tier2-negative-topmargin)) !important;
+                    @include grid-column($columns: 9);
+                }
+
+                h1 {
+                    position: relative;
+                    font-size: 1rem;
+                    margin: 0;
+                    line-height: 1.5;
+                    text-transform: uppercase;
+                    font-weight: 800;
+                    padding: 0;
+                }
+
+                .body {
+                    padding-top: rem-calc(20px);
+
+                    @include breakpoint(large) {
+                        padding-top: rem-calc(30px);
+                    }
+                }
+            }
+        }
+
+        @include breakpoint(large) {
+            &.underlap-tier2 {
+                margin-top: (-$tier2-negative-topmargin);
+                padding-top: $tier2-negative-topmargin + $af-section-padding-top;
+            }
+        }
+
+        @include section-backgrounds;
+    }
+}
+
+@mixin section-backgrounds {
+
+    &.img-background {
+
+        &.cover {
+            position: relative;
+            @include bgd-cover-image($af-shade-background-images);
+
+            > .row {
+                position: relative;
+            }
+        }
+    }
+}

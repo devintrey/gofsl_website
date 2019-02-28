@@ -1,0 +1,25 @@
+﻿/// <reference path="../core.scss"/>
+
+///This resolves issues with input placeholder text being dark in some browsers
+@mixin af-forms-placeholder-fix {
+    input::-webkit-input-placeholder { /* WebKit browsers */
+        color: whatColor(light-gray);
+    }
+
+    input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: whatColor(light-gray);
+    }
+
+    input::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: whatColor(light-gray);
+    }
+
+    input:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: whatColor(light-gray);
+    }
+}
+
+
+@mixin af-forms {
+    @include af-forms-placeholder-fix;
+}
