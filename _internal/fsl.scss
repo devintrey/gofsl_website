@@ -1,0 +1,222 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700,800');
+
+@import "../_core/scss/core.scss";
+
+//WRITE IT ALL OUT (TO USE IT ALL, PUT IN YOUR LOCAL SITE SASS FILE)
+@include foundation-everything(true); //FOUNDATION
+@include af-everything; //CORE
+
+body, html {
+    height: 100%;
+}
+
+address {
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-style: normal;
+    color: whatColor(maroon);
+}
+
+.error-list {
+    display: none;
+    overflow: auto;
+    color: get-color(alert);
+    background-color: tint(whatColor(dark-gray),90%);
+    padding: rem-calc(12px);
+    border-radius: rem-calc(5px);
+    border: 1px solid whatColor(dark-gray);
+    margin-bottom: 10px;
+
+    h5 {
+        font-size: 1.0rem;
+        font-weight: 700;
+    }
+
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+
+
+        li {
+            padding-left: 1em;
+            text-indent: -1em;
+
+            label {
+                display: inline;
+                color: get-color(alert);
+                font-weight: 700;
+            }
+
+            &:before {
+                font-family: 'FontAwesome';
+                font-size: 0.85em;
+                font-weight: 700;
+                content: "\f06a";
+                padding-right: rem-calc(7px);
+            }
+        }
+    }
+}
+
+input.error, textarea.error, input:focus.error {
+    border: 2px double get-color(alert);
+}
+
+input.success, textarea.success, input:focus.success {
+    border: 1px double get-color(success);
+}
+
+
+.fa.fa-circle.fa-small:first-of-type {
+    margin-left: 7px;
+}
+.testimonial-ticker {
+    color: whatColor(light-gray);
+    font-weight: 700;
+
+    .fa-small {
+        font-size: 0.20rem;
+        color: whatColor(orange);
+        margin-right: 7px;
+        vertical-align: middle;
+    }
+
+   
+
+
+
+    .text {
+        padding: rem-calc(7px) rem-calc(15px);
+        display: inline-block;
+        border: 3px whatColor(orange) solid;
+    }
+}
+
+.img-crossfade {
+    position: relative;
+
+    a {
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            -webkit-transition: opacity 1s ease-in-out;
+            -moz-transition: opacity 1s ease-in-out;
+            -o-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+
+            &.top {
+                z-index: 2;
+            }
+        }
+
+        &:hover {
+            img.top {
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.triangle-bgd {
+    $g: &;
+    position: relative;
+    overflow: hidden;
+    display: block;
+
+    &:hover {
+        i {
+            color: whatColor(orange);
+        }
+    }
+
+    h3 {
+        font-weight: 700;
+        color: whatColor(black);
+
+        i {
+            color: whatColor(light-gray);
+            font-size: 0.8em;
+            margin-left: 3px;
+            @include transition(all .5s);
+
+            @at-root {
+                &:hover {
+                    color: whatColor(light-gray);
+                }
+            }
+        }
+    }
+
+    span {
+        max-height: 135px;
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            clip-path: polygon(52% 3%,0 91%,100% 93%);
+            background-color: whatColor(orange);
+            z-index: -1;
+            opacity: 0;
+            @include transition(all .5s);
+        }
+
+
+        &:hover {
+            &:after {
+                opacity: 1;
+            }
+        }
+
+        img {
+            max-height: 135px;
+        }
+    }
+}
+
+.pillars {
+
+    h2 {
+        //display: none; //js changes this
+        display: inline-block;
+        font-weight: 700;
+        color: whatColor(white);
+        font-size: 1.75rem;
+        text-shadow: 2px 2px 8px #333;
+
+        @include breakpoint(medium) {
+            font-size: 3rem;
+        }
+    }
+}
+
+h3 {
+    font-weight: 700;
+    text-shadow: 2px 2px 8px #333;
+}
+
+.no-section-nav {
+    @include flex-grid-column(12);
+    @include grid-column(12);
+}
+
+
+.blurb {
+    &.interactive {
+        height: auto !important;
+
+        &:hover {
+            h3 {
+                color: whatColor(white);
+            }
+        }
+    }
+}
