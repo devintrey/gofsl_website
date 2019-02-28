@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Our Team : FSL</title>
+
+    <!--#include virtual="/_includes/head.html"-->
+
+</head>
+<body>
+    <div class="off-canvas-wrapper">
+
+        <!--#include virtual="/_includes/navs/offcanvas.inc"-->
+
+        <div itemscope itemtype="http://schema.org/LocalBusiness" class="off-canvas-content" data-off-canvas-content>
+
+            <header class="bg-dark-gray" data-sticky-container>
+                <div class="sticky" data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="50" style="width:100%;">
+                    <div class="row" data-equalizer data-equalize-on="small only">
+                        <div class="small-9 medium-5 large-4 columns logo-container" data-equalizer-watch>
+                            <div itemprop="name" class="hide">
+                                FSL
+                            </div>
+                            <div class="logo">
+                                <a href="/">
+                                    <img itemprop="image" src="/images/fsl-logo-mixed-notext.png" alt="FSL Logo" />
+                                </a>
+                                <div class="visually-hidden">
+                                    FSL Logo
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-3 medium-7 large-8 columns nav-container" data-equalizer-watch>
+
+                            <div id="nav-main-sticky-wrapper" class="show-for-large">
+                                <nav role="navigation" aria-label="Main navigation" id="nav-main" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" class="main dropdown">
+                                    <!--#include virtual="/_includes/navs/topnav.html"-->
+                                </nav>
+                            </div>
+                            <div id="toggles">
+                                <a class="button pull-right hide-for-large menu-btn bg-orange" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas">Menu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="hero image">
+
+                <div class="bg-img" style="background-image: url('/images/hero-grayscale-truck.jpg');"></div>
+                <div class="filter"></div>
+                <div class="vCenter-container break-filter">
+                    <div class="vCenter-contents color-fsl-red text-center">
+
+                        <div class="pillar-block">
+                            <div class="pillars">
+                                <h2>Integrity.</h2>
+                                <h2 class="color-orange">Safety.</h2>
+                                <h2>Innovation.</h2>
+                            </div>
+                            &nbsp;&nbsp;
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </section>
+
+
+
+            <section class="tier2 bg-dark-gray">
+                <div class="row">
+                    <div id="content-main" class="content no-section-nav bg-white">
+                        <div class="breadcrumbs">
+                            <ul itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+                                <li itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+                                </li>
+                            </ul>
+                            <h1>Our Team</h1>
+                        </div>
+                        <div class="body">
+                            <div class="row">
+                                <div class="small-12 columns">
+                                    <h3 class="color-dark-gray no-shadow">Meet the Team</h3>
+                                    <p>Our friendly staff:</p>
+
+                                    <div class="card">
+                                        <div class="contact" data-equalizer>
+                                            <div class="thumb" data-equalizer-watch>
+                                                <img src="/images/staff/thumbnail-her.jpg" alt="Pamela Pentland" class="img-responsive rounded">
+                                            </div>
+                                            <div class="info" data-equalizer-watch>
+                                                <h4>Pamela Pentland</h4>
+                                                <h5>VP of Operations</h5>
+
+                                                <ul class="fa-ul staff-contact-info">
+                                                    <li><i class="fa fa-li fa-phone color-light-gray"></i>&nbsp;&nbsp;765.938.1710 ext. 8001</li>
+                                                    <li><i class="fa fa-li fa-envelope color-light-gray"></i>&nbsp;&nbsp;<a href="mailto:pamela.pentland@gofsl.com">pamela.pentland@gofsl.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="contact" data-equalizer>
+                                            <div class="thumb" data-equalizer-watch>
+                                                <img src="/images/staff/thumbnail-him.jpg" alt="Bonnie Klamar" class="img-responsive rounded">
+                                            </div>
+                                            <div class="info" data-equalizer-watch>
+                                                <h4>Douglas E. McClain</h4>
+                                                <h5>Business Development Director</h5>
+
+                                                <ul class="fa-ul staff-contact-info">
+                                                    <li><i class="fa fa-li fa-phone color-light-gray"></i>&nbsp;&nbsp;765.938.1710 ext. 8003</li>
+                                                    <li><i class="fa fa-li fa-envelope color-light-gray"></i>&nbsp;&nbsp;<a href="mailto:doug.mcclain@gofsl.com">doug.mcclain@gofsl.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="contact" data-equalizer>
+                                            <div class="thumb" data-equalizer-watch>
+                                                <img src="/images/staff/thumbnail-her.jpg" alt="Tierra Harrison" class="img-responsive rounded">
+                                            </div>
+                                            <div class="info" data-equalizer-watch>
+                                                <h4>Tierra Harrison</h4>
+                                                <h5>Logistics Planner</h5>
+
+                                                <ul class="fa-ul staff-contact-info">
+                                                    <li><i class="fa fa-li fa-phone color-light-gray"></i>&nbsp;&nbsp;765.932.9000 ext. 1230</li>
+                                                    <li><i class="fa fa-li fa-envelope color-light-gray"></i>&nbsp;&nbsp;<a href="mailto:tierra.harrison@gofsl.com">tierra.harrison@gofsl.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="contact" data-equalizer>
+                                            <div class="thumb" data-equalizer-watch>
+                                                <img src="/images/staff/thumbnail-her.jpg" alt="Kelley Dewberry" class="img-responsive rounded">
+                                            </div>
+                                            <div class="info" data-equalizer-watch>
+                                                <h4>Kelley Dewberry</h4>
+                                                <h5>Logistics Planner</h5>
+
+                                                <ul class="fa-ul staff-contact-info">
+                                                    <li><i class="fa fa-li fa-phone color-light-gray"></i>&nbsp;&nbsp;765.938.1710 ext. 8004</li>
+                                                    <li><i class="fa fa-li fa-envelope color-light-gray"></i>&nbsp;&nbsp;<a href="mailto:kelley.dewberry@gofsl.com">pamela.pentland@gofsl.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="contact" data-equalizer>
+                                            <div class="thumb" data-equalizer-watch>
+                                                <img src="/images/staff/thumbnail-him.jpg" alt="Marcus Reeder" class="img-responsive rounded">
+                                            </div>
+                                            <div class="info" data-equalizer-watch>
+                                                <h4>Marcus Reeder</h4>
+                                                <h5>Logistics Planner</h5>
+
+                                                <ul class="fa-ul staff-contact-info">
+                                                    <li><i class="fa fa-li fa-phone color-light-gray"></i>&nbsp;&nbsp;256.370.5602</li>
+                                                    <li><i class="fa fa-li fa-envelope color-light-gray"></i>&nbsp;&nbsp;<a href="mailto:marcus.reeder@gofsl.com">marcus.reeder@gofsl.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="contact" data-equalizer>
+                                            <div class="thumb" data-equalizer-watch>
+                                                <img src="/images/staff/thumbnail-her.jpg" alt="Valerie Newsome" class="img-responsive rounded">
+                                            </div>
+                                            <div class="info" data-equalizer-watch>
+                                                <h4>Valerie Newsome</h4>
+                                                <h5>Logistics Planner</h5>
+
+                                                <ul class="fa-ul staff-contact-info">
+                                                    <li><i class="fa fa-li fa-phone color-light-gray"></i>&nbsp;&nbsp;256.370.5512</li>
+                                                    <li><i class="fa fa-li fa-envelope color-light-gray"></i>&nbsp;&nbsp;<a href="mailto:valerie.newsome@gofsl.com">valerie.newsome@gofsl.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="contact" data-equalizer>
+                                            <div class="thumb" data-equalizer-watch>
+                                                <img src="/images/staff/thumbnail-her.jpg" alt="Kris Clarkson" class="img-responsive rounded">
+                                            </div>
+                                            <div class="info" data-equalizer-watch>
+                                                <h4>Kris Clarkson</h4>
+                                                <h5>Logistics Planner</h5>
+
+                                                <ul class="fa-ul staff-contact-info">
+                                                    <li><i class="fa fa-li fa-phone color-light-gray"></i>&nbsp;&nbsp;765.938.8060 ext. 1239</li>
+                                                    <li><i class="fa fa-li fa-envelope color-light-gray"></i>&nbsp;&nbsp;<a href="mailto:kris.clarkson@gofsl.com">kris.clarkson@gofsl.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="contact" data-equalizer>
+                                            <div class="thumb" data-equalizer-watch>
+                                                <img src="/images/staff/thumbnail-him.jpg" alt="Devin Pace" class="img-responsive rounded">
+                                            </div>
+                                            <div class="info" data-equalizer-watch>
+                                                <h4>Devin Pace</h4>
+                                                <h5>Logistics Analyst</h5>
+
+                                                <ul class="fa-ul staff-contact-info">
+                                                    <li><i class="fa fa-li fa-phone color-light-gray"></i>&nbsp;&nbsp;765.938.1710 ext. 8006</li>
+                                                    <li><i class="fa fa-li fa-envelope color-light-gray"></i>&nbsp;&nbsp;<a href="mailto:devin.pace@gofsl.com">devin.pace@gofsl.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="contact" data-equalizer>
+                                            <div class="thumb" data-equalizer-watch>
+                                                <img src="/images/staff/thumbnail-him.jpg" alt="Noah Bachman" class="img-responsive rounded">
+                                            </div>
+                                            <div class="info" data-equalizer-watch>
+                                                <h4>Noah Bachman</h4>
+                                                <h5>Logistics Planner</h5>
+
+                                                <ul class="fa-ul staff-contact-info">
+                                                    <li><i class="fa fa-li fa-phone color-light-gray"></i>&nbsp;&nbsp;765.938.1710 ext. 8005</li>
+                                                    <li><i class="fa fa-li fa-envelope color-light-gray"></i>&nbsp;&nbsp;<a href="mailto:noah.bachman@gofsl.com">noah.bachman@gofsl.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card">
+                                        <div class="contact" data-equalizer>
+                                            <div class="thumb" data-equalizer-watch>
+                                                <img src="/images/staff/thumbnail-him.jpg" alt="Michael Stooksberry" class="img-responsive rounded">
+                                            </div>
+                                            <div class="info" data-equalizer-watch>
+                                                <h4>Michael Stooksberry</h4>
+                                                <h5>Logistics Planner</h5>
+
+                                                <ul class="fa-ul staff-contact-info">
+                                                    <li><i class="fa fa-li fa-phone color-light-gray"></i>&nbsp;&nbsp;765.938.1710 ext. 8007</li>
+                                                    <li><i class="fa fa-li fa-envelope color-light-gray"></i>&nbsp;&nbsp;<a href="mailto:michael.stooksberry@gofsl.com">michael.stooksberry@gofsl.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="card">
+                                        <div class="contact" data-equalizer>
+                                            <div class="thumb" data-equalizer-watch>
+                                                <img src="/images/staff/thumbnail-her.jpg" alt="Sarah Weems" class="img-responsive rounded">
+                                            </div>
+                                            <div class="info" data-equalizer-watch>
+                                                <h4>Sarah Weems</h4>
+                                                <h5>Logistics Associate</h5>
+
+                                                <ul class="fa-ul staff-contact-info">
+                                                    <li><i class="fa fa-li fa-phone color-light-gray"></i>&nbsp;&nbsp;765.938.1710 ext. 8010</li>
+                                                    <li><i class="fa fa-li fa-envelope color-light-gray"></i>&nbsp;&nbsp;<a href="mailto:sarah.weems@gofsl.com">sarah.weems@gofsl.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="card">
+                                        <div class="contact" data-equalizer>
+                                            <div class="thumb" data-equalizer-watch>
+                                                <img src="/images/staff/thumbnail-her.jpg" alt="Brittany Bowden" class="img-responsive rounded">
+                                            </div>
+                                            <div class="info" data-equalizer-watch>
+                                                <h4>Brittany Bowden</h4>
+                                                <h5>Account Analyst</h5>
+
+                                                <ul class="fa-ul staff-contact-info">
+                                                    <li><i class="fa fa-li fa-phone color-light-gray"></i>&nbsp;&nbsp;765.938.1710 ext. 1229</li>
+                                                    <li><i class="fa fa-li fa-envelope color-light-gray"></i>&nbsp;&nbsp;<a href="mailto:brittany.bowden@gofsl.com">brittany.bowden@gofsl.com</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row color-maroon vertical-padding-10 font-1125rem bg-light-gray">
+                                        <div class="small-6 columns"><i class="fa fa-phone-square"></i> 765.938.1710</div>
+                                        <div class="small-6 columns text-right"><i class="fa fa-fax"></i> 765.273.4930</div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </section>
+
+
+
+
+            <!--#include virtual="/_includes/footer.inc"-->
+
+
+        </div><!-- /.inner-wrap -->
+
+
+
+    </div><!-- /.off-canvas-wrap -->
+    <!--#include virtual="/_includes/js.inc"-->
+    <!--#include virtual="/_includes/ga.inc"-->
+
+</body>
+
+</html>
