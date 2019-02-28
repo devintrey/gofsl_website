@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Welcome to FSL!</title>
+
+    <meta name="copyright" content="DriveFS is a subsite of FraleyAndSchilling.com" />
+    <meta name="description" content="Fraley & Schilling is growing quickly and looking for quality drivers to be part of our family!  This site is designed to provide information on our Driver experience!" />
+    <meta name="keywords" content="flatbed, conestoga, ultralight, van, dedicated, bulk tank, cdl, tractor-trailer, trucking, career, job, rushville, indiana, midwest, logistics" />
+    <meta name="dc.language" content="en" />
+    <meta name="dc.source" content="http://www.drivefs.com/" />
+    <meta name="dc.title" content="Drive for Fraley & Schilling" />
+    <meta name="dc.description" content="Fraley & Schilling is growing quickly and looking for quality drivers to be part of our family!  This site is designed to provide information on our Driver experience!" />
+    <meta name="dc.keywords" content="flatbed, conestoga, ultralight, van, dedicated, bulk tank, cdl, tractor-trailer, trucking, career, job, rushville, indiana, midwest, logistics" />
+
+    <!--#include virtual="/_includes/head.html"-->
+
+</head>
+<body>
+    <div class="off-canvas-wrapper">
+
+        <!--#include virtual="/_includes/navs/offcanvas.inc"-->
+
+        <div itemscope itemtype="http://schema.org/LocalBusiness" class="off-canvas-content" data-off-canvas-content>
+
+            <header class="bg-dark-gray" data-sticky-container>
+                <div class="sticky" data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="50" style="width:100%;">
+                    <div class="row" data-equalizer data-equalize-on="small only">
+                        <div class="small-9 medium-5 large-4 columns logo-container" data-equalizer-watch>
+                            <div itemprop="name" class="hide">
+                                FSL
+                            </div>
+                            <div class="logo">
+                                <a href="/">
+                                    <img itemprop="image" src="/images/fsl-logo-mixed-notext.png" alt="FSL Logo" />
+                                </a>
+                                <div class="visually-hidden">
+                                    FSL Logo
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-3 medium-7 large-8 columns nav-container" data-equalizer-watch>
+
+                            <div id="nav-main-sticky-wrapper" class="show-for-large">
+                                <nav role="navigation" aria-label="Main navigation" id="nav-main" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" class="main dropdown">
+                                    <!--#include virtual="/_includes/navs/topnav.html"-->
+                                </nav>
+                            </div>
+                            <div id="toggles">
+                                <a class="button pull-right hide-for-large menu-btn bg-orange" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas">Menu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="hero image">
+
+                <div class="bg-img" style="background-image: url('/images/hero-grayscale-truck.jpg');"></div>
+                <div class="filter"></div>
+                <div class="vCenter-container break-filter">
+                    <div class="vCenter-contents color-fsl-red text-center">
+
+                        <div class="pillar-block">
+                            <div class="pillars">
+                                <h2>Integrity.</h2>
+                                <h2 class="color-orange">Safety.</h2>
+                                <h2>Innovation.</h2>
+                            </div>
+                            &nbsp;&nbsp;
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </section>
+
+            
+
+            <section class="tier2 bg-orange">
+                <div class="row">
+                    <div id="content-main" class="content bg-white no-section-nav">
+                        <div class="breadcrumbs">
+                            <ul itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+                                <li itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem">
+                                    <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+                                </li>                                
+                            </ul>
+                            <h1>Contact FSL</h1>
+                        </div>
+                        <div class="body">
+                                <div class="row">
+                                    <div class="small-12 medium-6 columns">
+                                        <h3 class="color-dark-gray no-shadow">CONTACT FSL</h3>
+                                        <p>We value our customers and always look forward to our interactions.  Please contact us:</p>
+
+                                        <address>
+                                            FSL <br />
+                                            4002 Helton Dr. <br />
+                                            Suite 1A <br />
+                                            Florence, AL 35630 <br />
+                                            <i class="fa fa-phone"></i> 765.938.1710 <br />
+                                            <i class="fa fa-fax"></i> 765.273.4930
+                                        </address>
+                                    </div>
+                                    <div class="small-12 medium-6 columns">
+                                        <p>or use our contact form to e-mail us directly:</p>
+
+                                        <?php include "_includes/contact-form.php" ?>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+                
+
+            </section>
+
+
+
+
+            <!--#include virtual="/_includes/footer.inc"-->
+
+
+        </div><!-- /.inner-wrap -->
+
+
+
+    </div><!-- /.off-canvas-wrap -->
+    <!--#include virtual="/_includes/js.inc"-->
+    <!--#include virtual="/_includes/ga.inc"-->
+
+</body>
+
+</html>

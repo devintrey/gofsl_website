@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+
+
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Welcome to FSL - Best in Logistics</title>
+    <link rel="canonical" href="https://www.gofsl.com/" />
+    <meta name="copyright" content="Fraley & Schilling Logistics (FSL)" />
+    <meta name="description" content="Fraley & Schilling Logistics, known simply as FSL, provides quality logistcs in the Eastern states!  Integrity. Safety. Innovation." />
+    <meta name="keywords" content="logistics, 3pl, freight, supplier, carrier, flatbed, careers, ultralight, van, dedicated, bulk tank, cdl, tractor-trailer, trucking, career, job, rushville, indiana, midwest" />
+
+    <meta name="dc.language" content="en" />
+    <meta name="dc.source" content="http://www.gofsl.com/" />
+    <meta name="dc.title" content="Welcome to FSL - Best in Logistics" />
+    <meta name="dc.description" content="Fraley & Schilling Logistics, known simply as FSL, provides quality logistcs in the Eastern states!  Integrity. Safety. Innovation." />
+    <meta name="dc.keywords" content="logistics, 3pl, freight, supplier, carrier, flatbed, careers, ultralight, van, dedicated, bulk tank, cdl, tractor-trailer, trucking, career, job, rushville, indiana, midwest" />    
+    
+    <!--#include virtual="/_includes/head.html"-->
+
+</head>
+<body class="no-js">
+    <div class="off-canvas-wrapper">
+
+        <!--#include virtual="/_includes/navs/offcanvas.inc"-->
+
+        <div itemscope itemtype="http://schema.org/LocalBusiness" class="off-canvas-content" data-off-canvas-content>
+
+            <header class="bg-dark-gray" data-sticky-container>
+                <div class="sticky" data-sticky data-sticky-on="small" data-margin-top="0" data-top-anchor="50" style="width:100%;">
+                    <div class="row" data-equalizer data-equalize-on="small only">
+                        <div class="small-9 medium-5 large-4 columns logo-container" data-equalizer-watch>
+                            <div itemprop="name" class="hide">
+                                FSL
+                            </div>
+                            <div class="logo">
+                                <a href="/">
+                                    <img itemprop="image" src="/images/fsl-logo-mixed-notext.png" alt="FSL Logo" />
+                                </a>
+                                <div class="visually-hidden">
+                                    FSL Logo
+                                </div>
+                            </div>
+                        </div>
+                        <div class="small-3 medium-7 large-8 columns nav-container" data-equalizer-watch>
+
+                            <div id="nav-main-sticky-wrapper" class="show-for-large">
+                                <nav role="navigation" aria-label="Main navigation" id="nav-main" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement" class="main dropdown">
+                                    <!--#include virtual="/_includes/navs/topnav.html"-->
+                                </nav>
+                            </div>
+                            <div id="toggles">
+                                <a class="button pull-right hide-for-large menu-btn bg-orange" data-toggle="offCanvas" aria-expanded="false" aria-controls="offCanvas">Menu</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>    
+
+            <section class="hero image">
+                
+                <div class="bg-img" style="background-image: url('/images/hero-main-1.jpg');"></div>
+                <div class="filter"></div>
+                <div class="vCenter-container break-filter">
+                    <div class="vCenter-contents color-fsl-red text-center">
+                       
+                            <div class="pillar-block">
+                                <div class="pillars">
+                                    <h2>Integrity.</h2>
+                                    <h2 class="color-orange">Safety.</h2>
+                                    <h2>Innovation.</h2>
+                                </div>
+                                &nbsp;&nbsp;
+                            </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="vertical-padding-10 testimonial-ticker bg-dark-gray">
+                <div class="row">
+                    <div class="small-12 column text-center color-light-gray font-125rem">
+                        <i class="fa fa-phone-square"></i> 765.938.1710
+                    </div>
+                </div>
+                <!--<div class="column row slick">
+                    <div style="min-height:60px;">
+                        <div class="vCenter-container">
+                            <div class="vCenter-contents text-center">
+                                <div class="text">
+                                    This is a testimonial #1
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="min-height:60px;">
+                        <div class="vCenter-container">
+                            <div class="vCenter-contents text-center">
+                                <div class="text">
+                                    This is a testimonial #2
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="min-height:60px;">
+                        <div class="vCenter-container">
+                            <div class="vCenter-contents text-center">
+                                <div class="text">
+                                    This is a testimonial #3
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </section>
+
+            <section class="std">
+                <div class="row small-up-1 medium-up-3 text-center">
+                    <div class="column">
+                        <a href="/agents/prequal.shtml" class="disable-default triangle-bgd">
+                            <span><img src="/_internal/icons/customers.png" class="img-responsive" alt="Agents Icon"  /></span>
+                            <h3 class="no-shadow">Agent <br />Qualification<i class="fa fa-chevron-right"></i></h3>                                                      
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="/carriers.shtml" class="disable-default triangle-bgd">
+                            <span><img src="/_internal/icons/carriers.png" class="img-responsive" alt="Carriers Icon" /></span>
+                            <h3 class="no-shadow">Carriers<i class="fa fa-chevron-right"></i></h3>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a href="/loads/" class="disable-default triangle-bgd">
+                            <span><img src="/_internal/icons/triangle-loads.png" class="img-responsive" alt="Available Loads Icon" /></span>
+                            <h3 class="no-shadow">Available Loads<i class="fa fa-chevron-right"></i></h3>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="first-splash" class="std bg-orange color-white">
+
+                <div class="row">
+
+                    <div class="small-12 medium-8 columns text-center">
+                        <h3>Why FSL?</h3>
+                        <p>Simply put, we understand your challenges!  Our team is anchored by professionals who have walked in your shoes.  Our experience on the shipper side of the business gives us unique insight on the issues you face daily.  With our solutions-based philosophy, we work tirelessly to ensure you get the best possible service and value.</p>
+                        <p>Let us put our team to work for you!</p>
+                    </div>
+                    <div class="small-12 medium-4 columns text-center finger">
+                        <img src="images/fsl-logo-inverse.png" alt="FSL Team" class="img-responsive animated fadeInRightBig" />
+                    </div>
+                </div>
+            </section>
+
+            <section  class="std bg-fsl-red color-white img-background cover">
+                <div class="bg-img" style="background-image: url('/images/hero-grayscale-truck.jpg');"></div>
+
+                <div class="row">
+                    <div class="small-12 large-5 columns end blurb dark">
+                        <h3>Truckload</h3>
+                        <p>Our pre-qualified carrier base is ready to go to work for you. Our dedicated logistics team uses an exhaustive scoring system to guarantee that our partner carriers adhere to all safety, regulatory, and insurance requirements. This allows us to secure the capacity required to handle surges and special projects when the need arises. </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="std bg-dark-gray color-white">
+                <div class="row">
+                    <div class="small-12 columns text-center">
+                        <h3>3PL</h3>
+                        <p>At FSL, building relationships is at the center of everything we do.  Combining this passion with innovation and dedication make us an ideal partner in today’s complex, global supply chain.  Our team of professionals will analyze your network and drive continuous improvement by establishing Key Performance Indicators to measure progress and keep your business moving forward.  All of this is accomplished with seamless communication that allows you to focus your attention in other segments of your business.</p>
+
+                    </div>                    
+                </div>
+            </section>            
+
+
+            <!--#include virtual="/_includes/footer.inc"-->
+
+
+        </div><!-- /.inner-wrap -->
+
+
+
+    </div><!-- /.off-canvas-wrap -->
+
+
+
+    <!--#include virtual="/_includes/js.inc"-->
+    <!--#include virtual="/_includes/ga.inc"-->    
+
+</body>
+
+</html>
